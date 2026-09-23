@@ -1,0 +1,16 @@
+{
+  "name": "gclms-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "install:web": "npm --prefix gclms/apps/web install",
+    "dev": "npm --prefix gclms/apps/web run dev",
+    "build": "npm --prefix gclms/apps/web run build",
+    "start": "npm --prefix gclms/apps/web run start",
+    "lint": "npm --prefix gclms/apps/web run lint",
+    "test": "npm --prefix gclms/apps/web run test",
+    "docker:up": "docker compose -f gclms/docker-compose.yml --env-file gclms/.env.example up -d --build",
+    "docker:down": "docker compose -f gclms/docker-compose.yml down",
+    "docker:logs": "docker compose -f gclms/docker-compose.yml logs -f"
+  }
+}
